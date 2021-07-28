@@ -1,6 +1,7 @@
 .sidebar {
   position: fixed;
   background-color: #2e3650;
+
   height: 100% !important;
   width: 270px;
   z-index: 100;
@@ -14,13 +15,14 @@
   width: 90px;
 }
 
-.sidebar-dashboard .heading {
+/* .heading {
+  padding-top: -10px;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 20px;
   display: inline-block;
   font-weight: 400;
   color: white;
-}
+} */
 
 .top-section {
   position: relative;
@@ -77,12 +79,39 @@
   padding-left: 35px;
 }
 
+.divider {
+  width: 100%;
+  height: 1px;
+  border-radius: 2px;
+  background-color: white;
+  margin-top: 15px;
+}
+
 .menu-item {
   text-decoration: none;
   font-size: 15px;
   display: inline-block;
   font-weight: 400;
   color: white;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+
+.menu-item.active {
+}
+.menu-item span {
+  position: absolute;
+  display: inline-block;
+  line-height: 50px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.sidebar.inactive .main-menu .menu-item span {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .menu-icon {
@@ -94,11 +123,52 @@
   line-height: 50px;
   text-align: center;
 }
-.divider {
+
+.sub-menu {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  margin-left: 15px;
+  border-left: 1px solid;
+  box-sizing: border-box;
+  padding-left: 25px;
+  cursor: pointer;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in;
+}
+
+.sub-menu a {
+  display: block;
+  margin: 5px 0;
+  padding-bottom: 10px;
+}
+
+.sub-menu.active {
+  max-height: 200px;
+}
+
+.footer {
   width: 100%;
-  height: 1px;
+  height: 80px;
   border-radius: 2px;
-  background-color: white;
+  background: #384779;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.avatar {
+  font-size: 40px;
+  padding: 25px;
+  display: inline-block;
+}
+
+.user-info {
+  display: inline-block;
+  color: white;
 }
 /* #sidebar-wrapper {
   min-height: 100vh !important;

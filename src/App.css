@@ -16,3 +16,12 @@ body {
   background-color: rgb(238, 236, 236);
   font-family: "Roboto", sans-serif;
 }
+
+.container {
+  margin-left: 280px;
+  transition: margin-left 0.2s ease-in;
+}
+
+.container.inactive {
+  margin-left: 100px;
+}
